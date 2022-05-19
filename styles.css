@@ -1,0 +1,276 @@
+/* A general styling to remove margin and padding and make each element a box */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* Navigation Button */
+.brand p{
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px #494949, 3px 3px #18cdca;
+    color: aliceblue;
+}
+
+nav li a{
+    text-decoration: none;
+    color: white;
+    margin-left: 15px;
+    padding-left: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav{
+    display: flex;
+    padding: 1.5% 5%;
+    background-color: rgb(160, 155, 155);
+}
+
+nav ul{
+    display: flex;
+    justify-content: left;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+/* To remove the bullet points */
+nav li{
+    list-style-type: none;
+}
+
+nav li a:hover{
+    color: rgb(218, 200, 200);
+    border-left: 2px solid rgb(230, 193, 193);
+}
+
+/* End of Navigation Area */
+header{
+    display: flex;
+    padding: 4% 5%;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.name{
+    width: 70%;
+    margin-left: 5%;
+    text-align: left;
+}
+
+header div{
+    flex: 1;
+}
+
+figcaption{
+    font-size: 10px;
+    text-align: center;
+}
+
+.name{
+    flex: 3;
+}
+
+.name span{
+    color: #383838;
+}
+
+.name p{
+    line-height: 2;
+    margin-top: 10px;
+    width: 80%;
+}
+/* End of the Name and Image Section */
+
+main{
+    background-color: whitesmoke;
+}
+
+/* For the grid */
+@media screen and (max-width: 768px){
+    header{
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+
+    .name p {
+        width: 100%;
+    }
+    main{
+        background-color: rgb(153, 149, 149);
+    }
+    .goal-wrapper{
+        grid-template-areas: "a a"
+        "b b"
+        "c c"
+        "d d";
+        grid-gap: 20px;
+        padding-top: 1rem;
+    }
+    
+    .goal{
+        grid-area: a;
+    }
+    
+    .education{
+        grid-area: b;
+    }
+    
+    .experience{
+        grid-area: c;
+    }
+    
+    .hobbies{
+        grid-area: d;
+    }
+}
+
+.goal-wrapper{
+    padding: 5% 5% 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.goal h2, .education h2, .experience h2, .hobbies h2{
+    letter-spacing: 4px;
+    text-shadow: 2px 2px #494949, 3px 3px #18cdca;
+    color: aliceblue;
+}
+
+.education ul li{
+    list-style-type: none;
+    padding-bottom: 5px;
+}
+
+/* Footer */
+
+footer{
+    padding: 1% 5%;
+    text-align: center;
+    background-color: #363535;
+}
+footer a{
+    text-align: center;
+}
+.fa {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 10px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa:hover {
+    opacity: 0.5;
+}
+
+
+/* Contact Page */
+.form_wrapper {
+    padding: 0 3% 8%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    padding: 4% 5%;
+    width: 100%;
+    margin: 1rem;
+    background: whitesmoke;
+    border-radius: 6px;
+  }
+  input,
+  textarea {
+    padding: 1rem;
+    margin: 0.2rem;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: whitesmoke;
+    border: 2px solid rgb(192, 165, 218);
+    border-radius: 5px;
+    outline: none;
+  }
+  ::placeholder {
+    color: black;
+  }
+
+  .form select{
+      width: 99%;
+      align-self: center;
+      padding: 0.5rem;
+      border: 2px solid rgb(192, 165, 218);
+      background: whitesmoke;
+      outline: black;
+      border-radius: 5px;
+      margin-bottom: 5px;
+  }
+  .form .btn {
+    width: 40%;
+    align-self: center;
+    cursor: pointer;
+    transition: 0.2s linear;
+    font-weight: 600;
+  }
+  .form .btn:hover {
+    background: rgb(192, 165, 218);
+  }
+
+  /* Login */
+  .login_btn{
+      border: 1px solid whitesmoke;
+      padding: 1% 4%;
+      border-radius: 5px;
+  }
+
+  .login {
+      margin-top: 40px;
+      padding: 0 5%;
+  }
+
+  .login h2{
+      color: rgb(192, 165, 218);
+  } 
+
+  /* Footer for Contact, Login and Register */
+  .footer{
+      text-align: center;
+  }
